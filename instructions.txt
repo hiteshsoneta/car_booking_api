@@ -1,0 +1,49 @@
+this api will get all requests form postman
+and you need to have a local mongo db server running all the time
+will run on port 3000 by default
+
+to add a car
+apply a post request to http://localhost:3000/car
+now you need to pass json data in format given format 
+{
+	"model":"",
+	"vehicle_no":"",
+	"capacity":,
+	"rent":
+	
+
+	}
+
+
+to display all cars a get request to  http://localhost:3000/car
+
+
+to get details of specific car
+a get request to  http://localhost:3000/car/<id> (id will be replaced by _id given by mongodb)
+
+to delete a car make sure no booking is done to that car els eit wont delete that car
+a delete request to  http://localhost:3000/car/<id> (id will be replaced by _id given by mongodb)
+
+
+to update fields of a car
+a patch request to  http://localhost:3000/car/<id> (id will be replaced by _id given by mongodb)
+
+
+to book a car 
+a post request to http://localhost:3000/car/reserve/<id> (id will be replaced by vehicle_no of a car)
+now you need to pass json data in format given format 
+{
+	"name":"",
+	"phone_no":"",
+	"booking_date":"",
+	"return_date":""
+	
+
+	}
+format of both booking_date and return_date is "05/13/20 11:00 AM, EST"
+
+to get status of car 
+a get request to http://localhost:3000/car/status/<id> (id will be replaced by vehicle_no of a car)
+
+
+
