@@ -2,6 +2,14 @@ this api will get all requests form postman
 and you need to have a local mongo db server running all the time
 will run on port 3000 by default
 
+
+api authorization is also added 
+first of all you need to post a request on http://localhost:3000/login
+a token will be given copy that token into header of postman with key=Authorization and value=Bearer <token value>
+
+
+if you dont follow above step you wont be able to move to  setps given below
+
 to add a car
 apply a post request to http://localhost:3000/car
 now you need to pass json data in format given format 
